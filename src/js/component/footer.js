@@ -7,8 +7,8 @@ export const Footer = () => (
 			<a href="https://github.com/abielsaf" style={{ color: '#c0c0c0' }}>abielsaf</a>
 		</p>
 
-		<p className="col-6">
-			<a href="https://www.freepik.com/free-vector/universe-exploration-composition-with-space-ship-flying-international-space-station-against-starry-sky-cartoon_16409949.htm#fromView=search&term=star+wars&track=ais&regularType=vector&page=1&position=0&uuid=70eb1883-9f9e-4842-b9cf-6a59ca6da321">Image by macrovector</a> on Freepik
+		<p className="col-6"> 
+			<a href="https://www.freepik.com/free-vector/mars-landscape-space-scene_5044129.htm#fromView=search&term=star+wars+background&track=ais&regularType=vector&page=1&position=21&uuid=3a0b137a-26c8-4b77-b155-7e7624e28005" style={{ color: '#c0c0c0' }}>Image by brgfx</a> on Freepik
 		</p>
 
 	</footer>
