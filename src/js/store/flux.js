@@ -24,6 +24,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+			addFavorites:(item) => {
+				setStore({favorites: [...getStore().favorites,item]}) 
+			},
+			deleteFavorites:(item) => {
+				setStore({favorites:getStore().favorites.filter((x)=>{return x != item})})
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -34,6 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
+				
 
 				//reset the global store
 				setStore({ demo: demo });

@@ -1,0 +1,15 @@
+
+body {
+    background-image: url(https://img.freepik.com/free-vector/universe-exploration-composition-with-space-ship-flying-international-space-station-against-starry-sky-cartoon_1284-62454.jpg?w=1380&t=st=1706726307~exp=1706726907~hmac=b10c5ca7d50740eebefeaa1cf3b6e7508ebf326264e764f2425d98e1b6b6ce4b);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dropdown {
+margin-right: 10px;
+}
