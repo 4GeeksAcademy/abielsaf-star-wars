@@ -1,0 +1,23 @@
+.textDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textDetails p {
+    text-align: justify;
+}
+
+.detailsContainer div {
+    border: 2px solid #ffcd38;
+    border-radius: 3px;
+}
+
+.col div {
+    font-size: 25px;
+}
+
+.introContainer img {
+    max-width: 300px;
+}

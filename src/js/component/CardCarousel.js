@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { CardPlanets } from "./CardPlanets";
 import { CardVehicle } from "./CardVehicle";
 import { CardCharacters } from "./CardCharacters";
-// import "../../styles/cardCarousel.css";
+import "../../styles/cardCarousel.css";
 
 export const CardCarousel = ({ dataType }) => {
     const { store, actions } = useContext(Context);

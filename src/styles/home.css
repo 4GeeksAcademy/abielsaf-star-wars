@@ -9,6 +9,15 @@ body {
     font-style: normal;
 }
 
+.listHome {
+    margin: 50px;
+}
+
+.listHome h2 {
+    font-size: 45px;
+    margin-top: 15px;
+}
+
 .dropdown {
 margin-right: 10px;
 }

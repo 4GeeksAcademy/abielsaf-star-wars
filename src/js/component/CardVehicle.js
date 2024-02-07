@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-import defaultPicture from "../../img/picture-not-available.jpeg";
-// import "../../styles/cardComponent.css";
+// import defaultPicture from "../../img/picture-not-available.jpg";
+import "../../styles/cardComponent.css";
 
 export const CardVehicle = ({ uid, name, dataType }) => {
     const { actions } = useContext(Context);
