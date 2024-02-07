@@ -1,52 +1,89 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			characters: [],
+			planets: [],
+			vehicles: [],
+			favorites: [],
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			loadCharacter: () => {
+				return fetch("https://www.swapi.tech/api/people")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ characters: data.results });
+					})
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			loadPlanets: () => {
+				return fetch("https://www.swapi.tech/api/planets")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ planets: data.results });
+					})
 			},
-			addFavorites:(item) => {
-				setStore({favorites: [...getStore().favorites,item]}) 
+			loadVehicles: () => {
+				return fetch("https://www.swapi.tech/api/vehicles")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ vehicles: data.results });
+					})
 			},
-			deleteFavorites:(item) => {
-				setStore({favorites:getStore().favorites.filter((x)=>{return x != item})})
+			loadFavorites: () => {
+				const favoritesFromStorage = JSON.parse(localStorage.getItem("favorites")) || [];
+				setStore({ favorites: favoritesFromStorage });
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			loadDetailsPlanets: (uid) => {
+				return fetch(`https://www.swapi.tech/api/planets/${uid}`)
+					.then(res => res.json())
+					.then(data => {
+						const { planets } = getStore();
+						const updatedPlanetsList = planets.filter((item) => item.uid !== uid);
+						setStore({ planets: updatedPlanetsList });
+						localStorage.setItem(`planet-${uid}`, JSON.stringify(data));
+					});
+			},
+			loadDetailsVehicles: (uid) => {
+				return fetch(`https://www.swapi.tech/api/vehicles/${uid}`)
+					.then(res => res.json())
+					.then(data => {
+						const { vehicles } = getStore();
+						const updatedVehiclesList = vehicles.filter((item) => item.uid !== uid);
+						setStore({ vehicles: updatedVehiclesList });
+						localStorage.setItem(`vehicle-${uid}`, JSON.stringify(data));
+					});
+			},
+			loadDetailsCharacters: (uid) => {
+				return fetch(`https://www.swapi.tech/api/people/${uid}`)
+					.then(res => res.json())
+					.then(data => {
+						const { characters } = getStore();
+						const updatedCharactersList = characters.filter((item) => item.uid !== uid);
+						setStore({ characters: updatedCharactersList });
+						localStorage.setItem(`characters-${uid}`, JSON.stringify(data));
+					});
+			},
+			addFavorites: (name) => {
+				let store = getStore();
+				if (!store.favorites.includes(name)) {
+					const updatedFavorites = [...store.favorites, name];
+					setStore({ favorites: updatedFavorites });
+					localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+				} else {
+					alert("Ya ha sido agregado a favoritos")
+				}
+			},
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-				
+			deleteFavorite: (index) => {
+				const { favorites } = getStore();
+				const updatedFavorites = [...favorites];
+				updatedFavorites.splice(index, 1);
+				setStore({ favorites: updatedFavorites });
+				localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+			},
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
 		}
-	};
+	}
+
 };
 
 export default getState;
