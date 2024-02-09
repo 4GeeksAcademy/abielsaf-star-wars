@@ -1,0 +1,27 @@
+.favoriteCounter {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    padding: 3px;
+}
+
+nav span img {
+    width: 100px;
+    height: auto;
+    padding-left: 30px;
+}
+
+.dropdown button {
+    margin-right: 35px;
+}
+
+li a i {
+    margin-left: 20px;
+    font-size: 13px;
+
+}

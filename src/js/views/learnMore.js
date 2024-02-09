@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-// import defaultPicture from "../../img/picture-not-available.jpg";
+import defaultPicture from "../../img/picture-not-available.jpeg";
 import "../../styles/learnMore.css"
 
 
