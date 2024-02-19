@@ -18,7 +18,7 @@ export const CardCarousel = ({ dataType }) => {
                 : null;
 
     return (
-        <div className="carousels row d-flex flex-nowrap overflow-auto">
+        <div className="carousels row d-flex flex-nowrap overflow-auto" data-bs-theme="dark">
             {dataToDisplay.map((item, index) => (
                 <CardComponent key={item.uid} uid={item.uid} name={item.name} dataType={dataType} />
             ))}

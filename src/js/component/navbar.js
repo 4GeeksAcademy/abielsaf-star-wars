@@ -27,14 +27,14 @@ export const Navbar = () => {
 	}, [favorites]);
 
 	return (
-		<nav className="navbar navbar-light bg-light p-3 sticky-top">
+		<nav className="navbar navbar-dark bg-dark p-3 sticky-top">
 			<Link to="/">
 				<span className="navbar-brand h1">
 					{" "}
 					<img src={logoStarWars} alt="Star Wars Logo" />
 				</span>
 			</Link>
-			<div className="dropdown">
+			<div className="dropdown" data-bs-theme="dark">
 				<button
 					className={showDropdown ? "btn btn-warning dropdown-toggle show" : "btn btn-warning dropdown-toggle"}
 					type="button"

@@ -19,7 +19,7 @@ export const CardCharacters = ({ uid, name, dataType }) => {
 
     return (
 
-        <div key={uid} className="col contactList d-flex">
+        <div key={uid} className="col contactList d-flex" data-bs-theme="dark">
             <div className="card" style={{ width: "18rem", flex: "0 0 auto" }}>
                 <img src={`https://starwars-visualguide.com/assets/img/characters/${uid}.jpg`}
                     onError={(e) => {
