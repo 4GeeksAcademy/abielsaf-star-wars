@@ -33,7 +33,7 @@ export const LearnMore = () => {
     }, [dataType, uid, actions]);
 
     return (
-        <div>
+        <div className="beige">
             {details && details.result && (
                 <div>
                     <div className="introContainer m-4 d-flex">
@@ -45,7 +45,7 @@ export const LearnMore = () => {
                         </div>
                         <div className="textDetails p-5">
                             <h1>{details.result.properties.name}</h1>
-                            <p>En una galaxia muy, muy lejana, la lucha entre el lado luminoso y el lado oscuro continúa. Los planetas se alzan como testigos silenciosos de esta eterna batalla cósmica. Entre los astros, Tatooine emerge como un páramo árido y desolado, hogar de criaturas misteriosas y aventureros audaces. Mientras tanto, en la vastedad del espacio, naves espaciales surcan las estrellas, desde los icónicos X-Wings de la Alianza Rebelde hasta los imponentes Star Destroyers del Imperio Galáctico. En medio de este conflicto interminable, héroes y villanos se elevan, cada uno con su propio destino entrelazado en la tela de la historia galáctica. Desde los Jedi, protectores de la paz y la justicia, hasta los Sith, seguidores del poder y la dominación, el universo de Star Wars brilla con una diversidad de mundos, personajes y aventuras que capturan la imaginación de generaciones.</p>
+                            <p>This story happened a long time ago in a galaxy far, far away. It is already over. Nothing can be done to change it. It is a story of love and loss, brotherhood and betrayal, courage and sacrifice and the death of dreams. It is a story of the blurred line between our best and our worst. It is the story of the end of an age.</p>
                         </div>
                         <hr />
                     </div>

@@ -1,5 +1,11 @@
+* {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 body {
-    background-image: url("https://img.freepik.com/free-vector/mars-landscape-space-scene_1308-31729.jpg?w=1380&t=st=1706730391~exp=1706730991~hmac=a645bfd13dc753189e41f349215cc80264bfec54acd776071d234b623cf55707");
+    background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,14 +14,22 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
+h2 {
+    color: beige;
+}
+.footer{
+    color: beige;
+}
+.beige {
+    color: beige;
+}
 .listHome {
     margin: 50px;
 }
 
 .listHome h2 {
     font-size: 45px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .dropdown {

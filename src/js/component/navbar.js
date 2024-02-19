@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-// import "../../styles/navbar.css";
-// import logoStarWars from "../../img/star-wars-logo.png.png";
+import "../../styles/navbar.css";
+import logoStarWars from "../../img/star-wars-logo.png.png";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
@@ -28,11 +28,12 @@ export const Navbar = () => {
 
 	return (
 		<nav className="navbar navbar-light bg-light p-3 sticky-top">
-
-			<Link to="/" className="mr-auto">
-				<img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Star_wars_1977_us.svg/429px-Star_wars_1977_us.svg.png"} alt="Logo" height="70" className="logo" />
+			<Link to="/">
+				<span className="navbar-brand h1">
+					{" "}
+					<img src={logoStarWars} alt="Star Wars Logo" />
+				</span>
 			</Link>
-
 			<div className="dropdown">
 				<button
 					className={showDropdown ? "btn btn-warning dropdown-toggle show" : "btn btn-warning dropdown-toggle"}
@@ -64,6 +65,3 @@ export const Navbar = () => {
 		</nav>
 	);
 };
-{/* <Link to="/" className="mr-auto">
-				<img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Star_wars_1977_us.svg/429px-Star_wars_1977_us.svg.png"} alt="Logo" height="70" className="logo" />
-			</Link> */}
