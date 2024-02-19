@@ -38,7 +38,7 @@ export const CardVehicle = ({ uid, name, dataType }) => {
                     )}
                     <div className="buttonsCard d-flex justify-content-between">
                         <Link to={`/details/${dataType}/${uid}`} className="btn btn-outline-primary">Learn More</Link>
-                        <button onClick={() => { actions.addFavorites(name) }} type="button" className="btn btn-outline-warning"><i className="fa-regular fa-heart fa-beat"></i></button>
+                        <button onClick={() => { actions.addFavorites(name) }} type="button" className="btn btn-outline-warning"><i className="fa-solid fa-heart"></i></button>
                     </div>
                 </div>
             </div>
